@@ -1,0 +1,477 @@
+vagrant@ubuntu-xenial:~$ cd workspace
+vagrant@ubuntu-xenial:~/workspace$ rails _5.2.3_ new sample -d postgresql
+rbenv: rails: command not found
+
+The `rails' command exists in these Ruby versions:
+  2.5.1
+
+vagrant@ubuntu-xenial:~/workspace$ ruby -v
+ruby 2.6.3p62 (2019-04-16 revision 67580) [x86_64-linux]
+vagrant@ubuntu-xenial:~/workspace$ gem list rails
+
+*** LOCAL GEMS ***
+
+
+vagrant@ubuntu-xenial:~/workspace$ cd..
+cd..: command not found
+vagrant@ubuntu-xenial:~/workspace$ cd ..
+vagrant@ubuntu-xenial:~$ rails _5.2.3_ new sample -d postgresql
+rbenv: rails: command not found
+
+The `rails' command exists in these Ruby versions:
+  2.5.1
+
+vagrant@ubuntu-xenial:~$ ruby -v
+ruby 2.6.3p62 (2019-04-16 revision 67580) [x86_64-linux]
+vagrant@ubuntu-xenial:~$ ls
+workspace
+vagrant@ubuntu-xenial:~$ cd workspace
+vagrant@ubuntu-xenial:~/workspace$ rails _5.2.3_ new sample -d postgresql
+rbenv: rails: command not found
+
+The `rails' command exists in these Ruby versions:
+  2.5.1
+
+vagrant@ubuntu-xenial:~/workspace$ ^C
+: command not found
+vagrant@ubuntu-xenial:~/workspace$ gem update --system
+Updating rubygems-update
+Fetching rubygems-update-3.0.6.gem
+Successfully installed rubygems-update-3.0.6
+Parsing documentation for rubygems-update-3.0.6
+Installing ri documentation for rubygems-update-3.0.6
+Installing darkfish documentation for rubygems-update-3.0.6
+Done installing documentation for rubygems-update after 111 seconds
+Parsing documentation for rubygems-update-3.0.6
+Done installing documentation for rubygems-update after 0 seconds
+Installing RubyGems 3.0.6
+Bundler 1.17.3 installed
+RubyGems 3.0.6 installed
+Regenerating binstubs
+Parsing documentation for rubygems-3.0.6
+Installing ri documentation for rubygems-3.0.6
+
+=== 3.0.6 / 2019-08-17
+
+Bug fixes:
+
+* Revert #2813. It broke the compatibility with 3.0.x versions.
+
+=== 3.0.5 / 2019-08-16
+
+Minor enhancements:
+
+* Use env var to configure api key on push. Pull request #2559 by Luis
+  Sagastume.
+* Unswallow uninstall error. Pull request #2707 by David Rodríguez.
+* Expose windows path normalization utility. Pull request #2767 by David
+  Rodríguez.
+* Clean which command. Pull request #2801 by Luis Sagastume.
+* Upgrading S3 source signature to AWS SigV4. Pull request #2807 by
+  Alexander Pakulov.
+* Remove missleading comment, no reason to move Gem.host to Gem::Util.
+  Pull request #2811 by Luis Sagastume.
+* Drop support for 'gem env packageversion'. Pull request #2813 by Luis
+  Sagastume.
+* Take into account just git tracked files in update_manifest rake task.
+  Pull request #2816 by Luis Sagastume.
+* Remove TODO comment, there's no Gem::Dirs constant. Pull request #2819
+  by Luis Sagastume.
+* Remove unused 'raise' from test_case. Pull request #2820 by Luis
+  Sagastume.
+* Move TODO comment to an information comment. Pull request #2821 by Luis
+  Sagastume.
+* Use File#open instead of Kernel#open in stub_specification.rb. Pull
+  request #2834 by Luis Sagastume.
+* Make error code a gemcutter_utilities a constant. Pull request #2844 by
+  Luis Sagastume.
+* Remove FIXME comment related to PathSupport. Pull request #2854 by Luis
+  Sagastume.
+* Use gsub with Hash. Pull request #2860 by Kazuhiro NISHIYAMA.
+* Use the standard RUBY_ENGINE_VERSION instead of JRUBY_VERSION. Pull
+  request #2864 by Benoit Daloze.
+* Do not mutate uri.query during s3 signature creation. Pull request #2874
+  by Alexander Pakulov.
+* Fixup #2844. Pull request #2878 by SHIBATA Hiroshi.
+
+Bug fixes:
+
+* Fix intermittent test error on Appveyor & Travis. Pull request #2568 by
+  MSP-Greg.
+* Extend timeout on assert_self_install_permissions. Pull request #2605 by
+  SHIBATA Hiroshi.
+* Better folder assertions. Pull request #2644 by David Rodríguez.
+* Fix default gem executable installation when folder is not `bin/`. Pull
+  request #2649 by David Rodríguez.
+* Fix gem uninstall behavior. Pull request #2663 by Luis Sagastume.
+* Fix for large values in UID/GID fields in tar archives. Pull request
+  #2780 by Alexey Shein.
+* Fixed task order for release. Pull request #2792 by SHIBATA Hiroshi.
+* Ignore GEMRC variable for test suite. Pull request #2837 by SHIBATA
+  Hiroshi.
+
+=== 3.0.4 / 2019-06-14
+
+Minor enhancements:
+
+* Add support for TruffleRuby #2612 by Benoit Daloze
+* Serve a more descriptive error when --no-ri or --no-rdoc are used #2572
+  by Grey Baker
+* Improve test compatibility with CMake 2.8. Pull request #2590 by Vít
+  Ondruch.
+* Restore gem build behavior and introduce the "-C" flag to gem build.
+  Pull request #2596 by Luis Sagastume.
+* Enabled block call with util_set_arch. Pull request #2603 by SHIBATA
+  Hiroshi.
+* Avoid rdoc hook when it's failed to load rdoc library. Pull request
+  #2604 by SHIBATA Hiroshi.
+* Drop tests for legacy RDoc. Pull request #2608 by Nobuyoshi Nakada.
+* Update TODO comment. Pull request #2658 by Luis Sagastume.
+* Skip malicious extension test with mswin platform. Pull request #2670 by
+  SHIBATA Hiroshi.
+* Check deprecated methods on release. Pull request #2673 by David
+  Rodríguez.
+* Add steps to run bundler tests. Pull request #2680 by Aditya Prakash.
+* Skip temporary "No such host is known" error. Pull request #2684 by
+  Takashi Kokubun.
+* Replaced aws-sdk-s3 instead of s3cmd. Pull request #2688 by SHIBATA
+  Hiroshi.
+* Allow uninstall from symlinked GEM_HOME. Pull request #2720 by David
+  Rodríguez.
+* Use current checkout in CI to uninstall RVM related gems. Pull request
+  #2729 by David Rodríguez.
+* Update Contributor Covenant v1.4.1. Pull request #2751 by SHIBATA
+  Hiroshi.
+* Added supported versions of Ruby. Pull request #2756 by SHIBATA Hiroshi.
+* Fix shadowing outer local variable warning. Pull request #2763 by Luis
+  Sagastume.
+* Update the certificate files to make the test pass on Debian 10. Pull
+  request #2777 by Yusuke Endoh.
+* Backport ruby core changes. Pull request #2778 by SHIBATA Hiroshi.
+
+Bug fixes:
+
+* Test_gem.rb - intermittent failure fix. Pull request #2613 by MSP-Greg.
+* Fix sporadic CI failures. Pull request #2617 by David Rodríguez.
+* Fix flaky bundler version finder tests. Pull request #2624 by David
+  Rodríguez.
+* Fix gem indexer tests leaking utility gems. Pull request #2625 by David
+  Rodríguez.
+* Clean up default spec dir too. Pull request #2639 by David Rodríguez.
+* Fix 2.6.1 build against vendored bundler. Pull request #2645 by David
+  Rodríguez.
+* Fix comment typo. Pull request #2664 by Luis Sagastume.
+* Fix comment of Gem::Specification#required_ruby_version=. Pull request
+  #2732 by Alex Junger.
+* Fix TODOs. Pull request #2748 by David Rodríguez.
+
+=== 3.0.3 / 2019-03-05
+
+Security fixes:
+
+* Fixed following vulnerabilities:
+  * CVE-2019-8320: Delete directory using symlink when decompressing tar
+  * CVE-2019-8321: Escape sequence injection vulnerability in `verbose`
+  * CVE-2019-8322: Escape sequence injection vulnerability in `gem owner`
+  * CVE-2019-8323: Escape sequence injection vulnerability in API response handling
+  * CVE-2019-8324: Installing a malicious gem may lead to arbitrary code execution
+  * CVE-2019-8325: Escape sequence injection vulnerability in errors
+
+
+------------------------------------------------------------------------------
+
+RubyGems installed the following executables:
+        /home/vagrant/.rbenv/versions/2.6.3/bin/gem
+        /home/vagrant/.rbenv/versions/2.6.3/bin/bundle
+
+Ruby Interactive (ri) documentation was installed. ri is kind of like man
+pages for Ruby libraries. You may access it like this:
+  ri Classname
+  ri Classname.class_method
+  ri Classname#instance_method
+If you do not wish to install this documentation in the future, use the
+--no-document flag, or set it as the default in your ~/.gemrc file. See
+'gem help env' for details.
+
+RubyGems system software updated
+vagrant@ubuntu-xenial:~/workspace$ gem install bundler
+Successfully installed bundler-2.0.2
+Parsing documentation for bundler-2.0.2
+rbInstalling ri documentation for bundler-2.0.2
+Done installing documentation for bundler after 10 seconds
+1 gem installed
+vagrant@ubuntu-xenial:~/workspace$ rbenv
+rbenv 1.1.2-2-g4e92322
+Usage: rbenv <command> [<args>]
+
+Some useful rbenv commands are:
+   commands    List all available rbenv commands
+   local       Set or show the local application-specific Ruby version
+   global      Set or show the global Ruby version
+   shell       Set or show the shell-specific Ruby version
+   install     Install a Ruby version using ruby-build
+   uninstall   Uninstall a specific Ruby version
+   rehash      Rehash rbenv shims (run this after installing executables)
+   version     Show the current Ruby version and its origin
+   versions    List installed Ruby versions
+   which       Display the full path to an executable
+   whence      List all Ruby versions that contain the given executable
+
+See `rbenv help <command>' for information on a specific command.
+For full documentation, see: https://github.com/rbenv/rbenv#readme
+vagrant@ubuntu-xenial:~/workspace$ rbenv install 5.2.3
+ruby-build: definition not found: 5.2.3
+
+See all available versions with `rbenv install --list'.
+
+If the version you need is missing, try upgrading ruby-build:
+
+  cd /home/vagrant/.rbenv/plugins/ruby-build && git pull && cd -
+vagrant@ubuntu-xenial:~/workspace$ rails _5.2.3_ new sample -d postgresql
+rbenv: rails: command not found
+
+The `rails' command exists in these Ruby versions:
+  2.5.1
+
+vagrant@ubuntu-xenial:~/workspace$ gem install rails
+Fetching thread_safe-0.3.6.gem
+Fetching i18n-1.7.0.gem
+Fetching concurrent-ruby-1.1.5.gem
+Fetching zeitwerk-2.2.1.gem
+Fetching activesupport-6.0.1.gem
+Fetching rack-2.0.7.gem
+Fetching rack-test-1.1.0.gem
+Fetching crass-1.0.5.gem
+Fetching mini_portile2-2.4.0.gem
+Fetching nokogiri-1.10.5.gem
+Fetching tzinfo-1.2.5.gem
+Fetching loofah-2.3.1.gem
+Fetching rails-html-sanitizer-1.3.0.gem
+Fetching rails-dom-testing-2.0.3.gem
+Fetching builder-3.2.3.gem
+Fetching actionpack-6.0.1.gem
+Fetching erubi-1.9.0.gem
+Fetching actionview-6.0.1.gem
+Fetching actionmailer-6.0.1.gem
+Fetching activerecord-6.0.1.gem
+Fetching globalid-0.4.2.gem
+Fetching activejob-6.0.1.gem
+Fetching mini_mime-1.0.2.gem
+Fetching activemodel-6.0.1.gem
+Fetching mail-2.7.1.gem
+Fetching activestorage-6.0.1.gem
+Fetching nio4r-2.5.2.gem
+Fetching websocket-extensions-0.1.4.gem
+Fetching websocket-driver-0.7.1.gem
+Fetching actioncable-6.0.1.gem
+Fetching mimemagic-0.3.3.gem
+Fetching marcel-0.3.3.gem
+Fetching rails-6.0.1.gem
+Fetching actionmailbox-6.0.1.gem
+Fetching actiontext-6.0.1.gem
+Fetching thor-0.20.3.gem
+Fetching method_source-0.9.2.gem
+Fetching railties-6.0.1.gem
+Fetching sprockets-4.0.0.gem
+Fetching sprockets-rails-3.2.1.gem
+Successfully installed concurrent-ruby-1.1.5
+
+HEADS UP! i18n 1.1 changed fallbacks to exclude default locale.
+But that may break your application.
+
+Please check your Rails app for 'config.i18n.fallbacks = true'.
+If you're using I18n (>= 1.1.0) and Rails (< 5.2.2), this should be
+'config.i18n.fallbacks = [I18n.default_locale]'.
+If not, fallbacks will be broken in your app by I18n 1.1.x.
+
+For more info see:
+https://github.com/svenfuchs/i18n/releases/tag/v1.1.0
+
+Successfully installed i18n-1.7.0
+Successfully installed thread_safe-0.3.6
+Successfully installed tzinfo-1.2.5
+Successfully installed zeitwerk-2.2.1
+Successfully installed activesupport-6.0.1
+Successfully installed rack-2.0.7
+Successfully installed rack-test-1.1.0
+Successfully installed mini_portile2-2.4.0
+Building native extensions. This could take a while...
+Successfully installed nokogiri-1.10.5
+Successfully installed crass-1.0.5
+Successfully installed loofah-2.3.1
+Successfully installed rails-html-sanitizer-1.3.0
+Successfully installed rails-dom-testing-2.0.3
+Successfully installed builder-3.2.3
+Successfully installed erubi-1.9.0
+Successfully installed actionview-6.0.1
+Successfully installed actionpack-6.0.1
+Successfully installed activemodel-6.0.1
+Successfully installed activerecord-6.0.1
+Successfully installed globalid-0.4.2
+Successfully installed activejob-6.0.1
+Successfully installed mini_mime-1.0.2
+Successfully installed mail-2.7.1
+Successfully installed actionmailer-6.0.1
+Building native extensions. This could take a while...
+Successfully installed nio4r-2.5.2
+Successfully installed websocket-extensions-0.1.4
+Building native extensions. This could take a while...
+Successfully installed websocket-driver-0.7.1
+Successfully installed actioncable-6.0.1
+Successfully installed mimemagic-0.3.3
+Successfully installed marcel-0.3.3
+Successfully installed activestorage-6.0.1
+Successfully installed actionmailbox-6.0.1
+Successfully installed actiontext-6.0.1
+Successfully installed thor-0.20.3
+Successfully installed method_source-0.9.2
+Successfully installed railties-6.0.1
+Successfully installed sprockets-4.0.0
+Successfully installed sprockets-rails-3.2.1
+Successfully installed rails-6.0.1
+Parsing documentation for concurrent-ruby-1.1.5
+Installing ri documentation for concurrent-ruby-1.1.5
+Parsing documentation for i18n-1.7.0
+Installing ri documentation for i18n-1.7.0
+Parsing documentation for thread_safe-0.3.6
+Installing ri documentation for thread_safe-0.3.6
+Parsing documentation for tzinfo-1.2.5
+Installing ri documentation for tzinfo-1.2.5
+Parsing documentation for zeitwerk-2.2.1
+Installing ri documentation for zeitwerk-2.2.1
+Parsing documentation for activesupport-6.0.1
+Installing ri documentation for activesupport-6.0.1
+Parsing documentation for rack-2.0.7
+Installing ri documentation for rack-2.0.7
+Parsing documentation for rack-test-1.1.0
+Installing ri documentation for rack-test-1.1.0
+Parsing documentation for mini_portile2-2.4.0
+Installing ri documentation for mini_portile2-2.4.0
+Parsing documentation for nokogiri-1.10.5
+Installing ri documentation for nokogiri-1.10.5
+Parsing documentation for crass-1.0.5
+Installing ri documentation for crass-1.0.5
+Parsing documentation for loofah-2.3.1
+Installing ri documentation for loofah-2.3.1
+Parsing documentation for rails-html-sanitizer-1.3.0
+Installing ri documentation for rails-html-sanitizer-1.3.0
+Parsing documentation for rails-dom-testing-2.0.3
+Installing ri documentation for rails-dom-testing-2.0.3
+Parsing documentation for builder-3.2.3
+Installing ri documentation for builder-3.2.3
+Parsing documentation for erubi-1.9.0
+Installing ri documentation for erubi-1.9.0
+Parsing documentation for actionview-6.0.1
+Installing ri documentation for actionview-6.0.1
+Parsing documentation for actionpack-6.0.1
+Installing ri documentation for actionpack-6.0.1
+Parsing documentation for activemodel-6.0.1
+Installing ri documentation for activemodel-6.0.1
+Parsing documentation for activerecord-6.0.1
+Installing ri documentation for activerecord-6.0.1
+Parsing documentation for globalid-0.4.2
+Installing ri documentation for globalid-0.4.2
+Parsing documentation for activejob-6.0.1
+Installing ri documentation for activejob-6.0.1
+Parsing documentation for mini_mime-1.0.2
+Installing ri documentation for mini_mime-1.0.2
+Parsing documentation for mail-2.7.1
+Installing ri documentation for mail-2.7.1
+Parsing documentation for actionmailer-6.0.1
+Installing ri documentation for actionmailer-6.0.1
+Parsing documentation for nio4r-2.5.2
+Installing ri documentation for nio4r-2.5.2
+Parsing documentation for websocket-extensions-0.1.4
+Installing ri documentation for websocket-extensions-0.1.4
+Parsing documentation for websocket-driver-0.7.1
+Installing ri documentation for websocket-driver-0.7.1
+Parsing documentation for actioncable-6.0.1
+Installing ri documentation for actioncable-6.0.1
+Parsing documentation for mimemagic-0.3.3
+Installing ri documentation for mimemagic-0.3.3
+Parsing documentation for marcel-0.3.3
+Installing ri documentation for marcel-0.3.3
+Parsing documentation for activestorage-6.0.1
+Installing ri documentation for activestorage-6.0.1
+Parsing documentation for actionmailbox-6.0.1
+Installing ri documentation for actionmailbox-6.0.1
+Parsing documentation for actiontext-6.0.1
+Installing ri documentation for actiontext-6.0.1
+Parsing documentation for thor-0.20.3
+Installing ri documentation for thor-0.20.3
+Parsing documentation for method_source-0.9.2
+Installing ri documentation for method_source-0.9.2
+Parsing documentation for railties-6.0.1
+Installing ri documentation for railties-6.0.1
+Parsing documentation for sprockets-4.0.0
+Installing ri documentation for sprockets-4.0.0
+Parsing documentation for sprockets-rails-3.2.1
+Installing ri documentation for sprockets-rails-3.2.1
+Parsing documentation for rails-6.0.1
+Installing ri documentation for rails-6.0.1
+Done installing documentation for concurrent-ruby, i18n, thread_safe, tzinfo, zeitwerk, activesupport, rack, rack-test, mini_portile2, nokogiri, crass, loofah, rails-html-sanitizer, rails-dom-testing, builder, erubi, actionview, actionpack, activemodel, activerecord, globalid, activejob, mini_mime, mail, actionmailer, nio4r, websocket-extensions, websocket-driver, actioncable, mimemagic, marcel, activestorage, actionmailbox, actiontext, thor, method_source, railties, sprockets, sprockets-rails, rails after 160 seconds
+40 gems installed
+vagrant@ubuntu-xenial:~/workspace$ rails --version
+Rails 6.0.1
+vagrant@ubuntu-xenial:~/workspace$ rails _5.2.3_ new sample -d postgresql
+Traceback (most recent call last):
+        2: from /home/vagrant/.rbenv/versions/2.6.3/bin/rails:23:in `<main>'
+        1: from /home/vagrant/.rbenv/versions/2.6.3/lib/ruby/site_ruby/2.6.0/rubygems.rb:303:in `activate_bin_path'
+/home/vagrant/.rbenv/versions/2.6.3/lib/ruby/site_ruby/2.6.0/rubygems.rb:284:in `find_spec_for_exe': can't find gem railties (= 5.2.3) with executable rails (Gem::GemNotFoundException)
+vagrant@ubuntu-xenial:~/workspace$ rails _5.2.3_ new sample -d postgresql
+Traceback (most recent call last):
+        2: from /home/vagrant/.rbenv/versions/2.6.3/bin/rails:23:in `<main>'
+        1: from /home/vagrant/.rbenv/versions/2.6.3/lib/ruby/site_ruby/2.6.0/rubygems.rb:303:in `activate_bin_path'
+/home/vagrant/.rbenv/versions/2.6.3/lib/ruby/site_ruby/2.6.0/rubygems.rb:284:in `find_spec_for_exe': can't find gem railties (= 5.2.3) with executable rails (Gem::GemNotFoundException)
+vagrant@ubuntu-xenial:~/workspace$
+vagrant@ubuntu-xenial:~/workspace$
+vagrant@ubuntu-xenial:~/workspace$
+vagrant@ubuntu-xenial:~/workspace$
+vagrant@ubuntu-xenial:~/workspace$
+vagrant@ubuntu-xenial:~/workspace$
+vagrant@ubuntu-xenial:~/workspace$
+vagrant@ubuntu-xenial:~/workspace$
+vagrant@ubuntu-xenial:~/workspace$
+vagrant@ubuntu-xenial:~/workspace$
+vagrant@ubuntu-xenial:~/workspace$
+vagrant@ubuntu-xenial:~/workspace$
+vagrant@ubuntu-xenial:~/workspace$
+vagrant@ubuntu-xenial:~/workspace$
+vagrant@ubuntu-xenial:~/workspace$
+vagrant@ubuntu-xenial:~/workspace$
+vagrant@ubuntu-xenial:~/workspace$
+vagrant@ubuntu-xenial:~/workspace$
+vagrant@ubuntu-xenial:~/workspace$
+vagrant@ubuntu-xenial:~/workspace$
+vagrant@ubuntu-xenial:~/workspace$
+vagrant@ubuntu-xenial:~/workspace$
+vagrant@ubuntu-xenial:~/workspace$
+vagrant@ubuntu-xenial:~/workspace$
+vagrant@ubuntu-xenial:~/workspace$
+vagrant@ubuntu-xenial:~/workspace$
+vagrant@ubuntu-xenial:~/workspace$
+vagrant@ubuntu-xenial:~/workspace$
+vagrant@ubuntu-xenial:~/workspace$
+vagrant@ubuntu-xenial:~/workspace$
+vagrant@ubuntu-xenial:~/workspace$
+vagrant@ubuntu-xenial:~/workspace$
+vagrant@ubuntu-xenial:~/workspace$
+vagrant@ubuntu-xenial:~/workspace$
+vagrant@ubuntu-xenial:~/workspace$
+vagrant@ubuntu-xenial:~/workspace$
+vagrant@ubuntu-xenial:~/workspace$
+vagrant@ubuntu-xenial:~/workspace$
+vagrant@ubuntu-xenial:~/workspace$
+vagrant@ubuntu-xenial:~/workspace$
+vagrant@ubuntu-xenial:~/workspace$ rails _5.2.3_ new sample -d postgresql
+Traceback (most recent call last):
+        2: from /home/vagrant/.rbenv/versions/2.6.3/bin/rails:23:in `<main>'
+        1: from /home/vagrant/.rbenv/versions/2.6.3/lib/ruby/site_ruby/2.6.0/rubygems.rb:303:in `activate_bin_path'
+/home/vagrant/.rbenv/versions/2.6.3/lib/ruby/site_ruby/2.6.0/rubygems.rb:284:in `find_spec_for_exe': can't find gem railties (= 5.2.3) with executable rails (Gem::GemNotFoundException)
+vagrant@ubuntu-xenial:~/workspace$ rbenv install 2.5.1
+rbenv: /home/vagrant/.rbenv/versions/2.5.1 already exists
+continue with installation? (y/N)
+vagrant@ubuntu-xenial:~/workspace$ rbenv local 2.5.1
+vagrant@ubuntu-xenial:~/workspace$ ruby -v
+ruby 2.5.1p57 (2018-03-29 revision 63029) [x86_64-linux]
+vagrant@ubuntu-xenial:~/workspace$ gem install rails
